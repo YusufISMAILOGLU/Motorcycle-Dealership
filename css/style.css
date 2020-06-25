@@ -1,0 +1,220 @@
+:root{
+    --lightGray:#F1F5F8;
+    --mainBlack:#191919;
+    --accentColor: #007bff;
+    --secondaryColor:#F3A738;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--mainBlack);
+    background-color: #ffffff;
+}
+
+.preloader{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #ffffff;
+    z-index: 101;
+}
+.hidePreloader{
+    display: none !important;
+}
+
+.section-title-special, .motor-price{
+    background: url('https://www.onlygfx.com/wp-content/uploads/2017/08/blue-watercolor-brush-stroke-4-4-1024x236.png');
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    padding: 1rem ;
+    color: #ffffff;
+}
+@media screen and (max-width:683px){
+    h1{
+        font-size: 1.5rem;
+    }
+}
+
+.navbar{
+    background-color: var(--lightGray);
+}
+
+.navbar-toggler{
+    color: var(--mainBlack);
+    outline: none !important;
+}
+
+.nav-link{
+    color: var(--mainBlack) !important;
+    text-transform: capitalize;
+    transition: all 1s ease;
+}
+.nav-link:hover, .nav-icon:hover{
+    color: var(--accentColor) !important;
+}
+.nav-icon{
+    color: var(--mainBlack);
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+
+.header{
+    color: #ffffff;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    overflow: hidden;
+}
+.height-max{
+    min-height: calc(100vh - 126px);
+    background: url("../images/headerBcg.jpg") center/cover fixed no-repeat;
+    animation-name: zoom;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+.banner-text{
+    background: rgba(19, 19, 19, .5);
+    position: absolute;
+    width: 20rem;
+    right: 6rem;
+    border-radius: .2rem;
+    border-left: .2rem solid var(--accentColor);
+}
+@media screen and (max-width:683px){
+    .banner-text{
+        right: 0rem;
+    }
+}
+
+
+/* Skills */
+.skills-icon{
+    color: var(--secondaryColor);
+    background: var(--lightGray);
+    font-size: 3rem;
+}
+.skills-icon:hover{
+    color: var(--secondaryColor);
+    opacity: .7;
+}
+.skills-underline{
+    width: 4rem;
+    height: .2rem;
+    background: var(--accentColor);
+    margin:1rem auto;
+}
+
+
+/* Gallery section */
+.motor-card{
+    transition: all .5s linear;
+}
+.motor-card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Question section */
+.question{
+    background: url(../images/questionBcg.jpg) center/cover fixed no-repeat;
+}
+.questionBcg-1{
+    background:rgba(79, 109, 122, .7) ;
+}
+.questionBcg-2{
+    background:rgba(227 , 181, 5, .7) ;
+}
+.question-icon{
+    font-size: 3rem;
+    color: var(--accentColor);
+    transition: all .5s ease;
+}
+.question-icon:hover{
+    color: var(--accentColor);
+    transform: translateY(16%);
+}
+
+/* Featured section */
+.featured-item{
+    background: var(--lightGray);
+    opacity: .5;
+    border-radius: .5rem;
+    transition: all .5s ease;
+}
+.featured-item:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.featured-icon{
+    font-size: 1.4rem;
+    color: var(--secondaryColor);
+    cursor: pointer;
+    transition: all 2s ease;
+}
+.featured-icon:hover{
+    /* transform:scale(1.1); */
+    color: var(--accentColor);
+}
+.img-container{
+    background: var(--accentColor);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+.featured-photo{
+    transition: all .5s ease;
+}
+.img-container:hover .featured-photo{
+    transform: scale(1.2);
+    opacity: .8;
+
+}
+.featured-link{
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--secondaryColor);
+    opacity: 0;
+    transition: all 1s ease;
+}
+.featured-link:hover{
+    color: #ffffff;
+
+}
+.img-container:hover .featured-link{
+    opacity: 1;
+}
+
+/* Footer section */
+.footer{
+    background: var(--mainBlack);
+}
+.social-icon{
+    font-size: 1.5rem;
+    color: var(--secondaryColor);
+    transition: all .5s ease;
+}
+.social-icon:hover{
+    color: var(--secondaryColor);
+    opacity: .5;
+}
